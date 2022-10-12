@@ -1,17 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-import Hero from './components/Hero';
 import HeroDos from './components/HeroDos';
-import ItemListContainer from './components/ItemListContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemList from './components/Shop2/ItemList';
 
 function App() {
   return (
     <div>
+      <BrowserRouter>
       <NavBar/>
-      <Hero/>
+      <Routes>
+    
+      <Route path={'/shop'} element={<ItemList/>} />
+      <Route path={'/shop/item/:id'} element={<ItemDetail/>} />
+      
+      </Routes>
       <HeroDos/>
-      <ItemListContainer greeting='© 2013 ETrade S.A'/>
+      </BrowserRouter>
+      
     </div>
   );
   

@@ -1,5 +1,3 @@
-import ItemListContainer from "./ItemListContainer"
-
 const HeroDos = () => {
   return (
     <div className="hero min-h-screen bg-base-200"><font></font>
